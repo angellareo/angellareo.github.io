@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Angel Lareo - Investigador en Biología Computacional">
+    <meta name="description" content="Angel Lareo - Computer Engineering Department UAM">
     <title>Angel Lareo</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,7 +17,7 @@
 
         body {
             font-family: "PT Sans", Helvetica, Arial, sans-serif;
-            background-color: #202020;
+            background-color: #202c39ff;
             color: rgba(255, 255, 255, 0.8);
             line-height: 1.6;
         }
@@ -88,6 +88,16 @@
 
         p {
             margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        ul {
+            margin-left: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
             font-size: 1.1rem;
         }
 
@@ -183,49 +193,109 @@
     <div class="container">
         <header>
             <h1>Angel Lareo</h1>
-            <p class="subtitle">Investigador en Biología Computacional</p>
+            <p class="subtitle" data-es="Ingeniería Informática - UAM" data-en="Computer Engineering - UAM">Computer Engineering Department - UAM</p>
             <div class="profile-links">
-                <a href="https://raw.githubusercontent.com/angellareo/alareo-cv/master/pdf/alareo/cv-ii-uam.pdf" class="btn" target="_blank" rel="noopener">Ver CV</a>
-                <a href="https://angellareo.github.io/blog/blog.html" class="btn" target="_blank" rel="noopener">Blog</a>
+                <a href="https://raw.githubusercontent.com/angellareo/alareo-cv/master/pdf/alareo/cv-ii-uam.pdf" class="btn" target="_blank" rel="noopener"><span data-es="Ver CV" data-en="View CV">View CV</span></a>
+                <button id="langToggle" class="btn" onclick="toggleLanguage()">
+                    <span id="langText">ES</span>
+                </button>
             </div>
         </header>
 
         <main>
             <section>
-                <h2>Sobre mí</h2>
-                <p>
-                    Soy investigador en el campo de la Biología Computacional, dedicado al estudio 
-                    de sistemas biológicos mediante herramientas computacionales y análisis de datos.
-                </p>
-                <p>
-                    Mi trabajo se centra en la aplicación de métodos computacionales para comprender 
-                    procesos biológicos complejos, integrando conocimientos de biología, informática 
-                    y estadística.
-                </p>
+                <h2 data-es="Sobre mí" data-en="About me">About me</h2>
+                <div class="lang-content" data-lang="es" style="display: none;">
+                    <p>
+                        Soy de Madrid, España. Tengo un doctorado en Ingeniería Informática y de Telecomunicación. 
+                        Actualmente doy clases e investigo en la <a href="https://www.uam.es/uam/inicio" target="_blank" rel="noopener">Universidad Autónoma de Madrid</a>.
+                    </p>
+                </div>
+                <div class="lang-content" data-lang="en">
+                    <p>
+                        I'm from Madrid, Spain. I have a PhD in Computer Engineering and Telecommunications. 
+                        I'm currently teaching and researching at <a href="https://www.uam.es/uam/inicio" target="_blank" rel="noopener">Universidad Autónoma de Madrid</a>.
+                    </p>
+                </div>
             </section>
 
             <section>
-                <h2>Investigación</h2>
-                <p>
-                    Mis líneas de investigación incluyen el análisis de datos biológicos, 
-                    modelado computacional y desarrollo de herramientas bioinformáticas.
-                </p>
-                <p>
-                    Para más información sobre mis publicaciones y proyectos de investigación, 
-                    puedes consultar mi perfil en 
-                    <a href="https://scholar.google.com/citations?user=zzaFkkoAAAAJ&hl=es" target="_blank" rel="noopener">Google Scholar</a>.
-                </p>
+                <h2 data-es="Intereses actuales" data-en="Current interests">Current interests</h2>
+                <div class="lang-content" data-lang="es" style="display: none;">
+                    <p>🤔 Mis <strong>intereses actuales</strong> incluyen:</p>
+                    <ul>
+                        <li>
+                            Aplicaciones interdisciplinarias de tecnología <strong>Free/Libre Open Source</strong>
+                            <ul>
+                                <li>Un <a href="https://github.com/angellareo/eea-work-ghg-20-30-model" target="_blank" rel="noopener">modelo simple</a> para simular escenarios laborales en la transición ecosocial.</li>
+                                <li>Puedes ver <a href="https://github.com/united-ecology/btmboard" target="_blank" rel="noopener">este datalogger de bajo consumo basado en Arduino libre</a>, actualmente usado en <a href="https://www.bryomicroclim.net/" target="_blank" rel="noopener">estudios de sostenibilidad</a>.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            Modelado computacional de sistemas dinámicos
+                            <ul>
+                                <li>Si te interesan los modelos neuronales, <a href="https://github.com/angellareo/neun" target="_blank" rel="noopener">¡mira esta librería!</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <!-- <p>💬 <strong>Más información</strong> en <a href="https://angellareo.github.io/blog/" target="_blank" rel="noopener">mi blog</a>.</p> -->
+                </div>
+                <div class="lang-content" data-lang="en">
+                    <p>🤔 My <strong>current interests</strong> include:</p>
+                    <ul>
+                        <li>
+                            Interdisciplinary applications of <strong>Free/Libre Open Source</strong> tech
+                            <ul>
+                                <li>A <a href="https://github.com/angellareo/eea-work-ghg-20-30-model" target="_blank" rel="noopener">simple model</a> to simulate work scenarios in the ecosocial transition.</li>
+                                <li>You can check <a href="https://github.com/united-ecology/btmboard" target="_blank" rel="noopener">this libre Arduino-based low-consumption datalogger</a>, currently being used in <a href="https://www.bryomicroclim.net/" target="_blank" rel="noopener">sustainability studies</a>.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            Computational modelling of dynamical systems
+                            <ul>
+                                <li>If you are interested in neuron models, <a href="https://github.com/angellareo/neun" target="_blank" rel="noopener">check this library!</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <!-- <p>💬 <strong>More information</strong> in <a href="https://angellareo.github.io/blog/" target="_blank" rel="noopener">my blog</a>.</p> -->
+                </div>
             </section>
 
             <section>
-                <h2>Contacto</h2>
-                <p>
-                    Email: <a href="mailto:angel.lareo@uam.es">angel.lareo@uam.es</a>
-                </p>
+                <h2 data-es="Investigación previa" data-en="Previous research">Previous research</h2>
+                <div class="lang-content" data-lang="es" style="display: none;">
+                    <p>🔭 Mis proyectos de investigación previos se centraron en:</p>
+                    <ul>
+                        <li><a href="https://doi.org/10.3389/fninf.2022.912654" target="_blank" rel="noopener">Modelado de la red de comando electromotor de mormíridos de pulso</a>. [<a href="https://github.com/GNB-UAM/electromotor-nmodel" target="_blank" rel="noopener">Repo</a>]</li>
+                        <li>Desarrollo de <a href="https://www.frontiersin.org/articles/10.3389/fninf.2016.00041/full" target="_blank" rel="noopener">protocolos de estimulación en bucle cerrado</a> basados en medidas de teoría de la información para estudiar la codificación temporal en el sistema nervioso.</li>
+                    </ul>
+                </div>
+                <div class="lang-content" data-lang="en">
+                    <p>🔭 My previous research projects were focused on:</p>
+                    <ul>
+                        <li><a href="https://doi.org/10.3389/fninf.2022.912654" target="_blank" rel="noopener">Modelling the electromotor command network of pulse mormyrids</a>. [<a href="https://github.com/GNB-UAM/electromotor-nmodel" target="_blank" rel="noopener">Repo</a>]</li>
+                        <li>Developing <a href="https://www.frontiersin.org/articles/10.3389/fninf.2016.00041/full" target="_blank" rel="noopener">closed-loop stimulation protocols</a> based on information theory measures for studying temporal coding in the nervous system.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section>
+                <h2 data-es="Contacto" data-en="Contact">Contact</h2>
+                <div class="lang-content" data-lang="es" style="display: none;">
+                    <p>
+                        📫 <a href="mailto:angel.lareo@uam.es">Contáctame</a> si tienes cualquier comentario, sugerencia o duda sobre mi trabajo.
+                    </p>
+                </div>
+                <div class="lang-content" data-lang="en">
+                    <p>
+                        📫 <a href="mailto:angel.lareo@uam.es">Contact me</a> if you have any comment, suggestion or doubt about my work.
+                    </p>
+                </div>
                 <div class="social-links">
                     <a href="https://github.com/angellareo" class="social-link" target="_blank" rel="noopener">GitHub</a>
-                    <a href="https://mastodon.social/@alareo" class="social-link" target="_blank" rel="noopener">Mastodon</a>
                     <a href="https://scholar.google.com/citations?user=zzaFkkoAAAAJ&hl=es" class="social-link" target="_blank" rel="noopener">Google Scholar</a>
+                    <a href="https://angellareo.github.io/blog/blog.html" class="social-link" target="_blank" rel="noopener">Blog</a>
+                    <a href="https://mastodon.social/@alareo" class="social-link" target="_blank" rel="noopener">Mastodon</a>
                     <a href="https://alfxogo.itch.io/" class="social-link" target="_blank" rel="noopener">Itch.io</a>
                 </div>
             </section>
@@ -235,5 +305,30 @@
             <p>&copy; 2025 Angel Lareo. Universidad Autónoma de Madrid.</p>
         </footer>
     </div>
+
+    <script>
+        let currentLang = 'en';
+
+        function toggleLanguage() {
+            currentLang = currentLang === 'es' ? 'en' : 'es';
+            
+            // Update language toggle button
+            document.getElementById('langText').textContent = currentLang === 'es' ? 'EN' : 'ES';
+            
+            // Update all content with data-lang attributes
+            document.querySelectorAll('.lang-content').forEach(element => {
+                if (element.dataset.lang === currentLang) {
+                    element.style.display = 'block';
+                } else {
+                    element.style.display = 'none';
+                }
+            });
+            
+            // Update all elements with data-es and data-en attributes
+            document.querySelectorAll('[data-es][data-en]').forEach(element => {
+                element.textContent = currentLang === 'es' ? element.dataset.es : element.dataset.en;
+            });
+        }
+    </script>
 </body>
 </html>
